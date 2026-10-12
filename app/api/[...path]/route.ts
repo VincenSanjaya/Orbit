@@ -17,6 +17,7 @@ import {
 import { subscribeMarket, liveSnapshot } from '@/lib/live/provider';
 import { db } from '@/lib/db';
 import { account } from '@/lib/portfolio';
+import { allowedMutationOrigin } from '@/lib/deployment';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 const json = (data: unknown, status = 200) =>
@@ -47,14 +48,12 @@ async function handle(request: NextRequest) {
       jar = await cookies(),
       token = jar.get('orbit_session')?.value;
     if (request.method === 'POST') {
-      const origin = request.headers.get('origin');
-      const supplied = origin && URL.canParse(origin) ? new URL(origin) : null;
       if (
-        origin &&
-        (!supplied ||
-          !['http:', 'https:'].includes(supplied.protocol) ||
-          supplied.host !== request.headers.get('host') ||
-          (process.env.APP_ORIGIN && origin !== process.env.APP_ORIGIN))
+        !allowedMutationOrigin(
+          request.headers.get('origin'),
+          request.headers.get('host'),
+          process.env.APP_ORIGIN,
+        )
       )
         throw new AppError('Request origin is not allowed.', 403);
       if (request.headers.get('content-type')?.split(';')[0] !== 'application/json')

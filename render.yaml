@@ -1,0 +1,23 @@
+# Review the paid service and disk costs before applying this Blueprint.
+services:
+  - type: web
+    name: orbit-backend
+    runtime: node
+    plan: starter
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/session
+    numInstances: 1
+    disk:
+      name: orbit-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 22.23.3
+      - key: DATABASE_PATH
+        value: /var/data/orbit.sqlite
+      - key: COOKIE_SECURE
+        value: 'true'
+      - key: APP_ORIGIN
+        sync: false

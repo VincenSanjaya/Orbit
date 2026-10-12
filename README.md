@@ -219,6 +219,11 @@ See `docs/VERIFICATION.md` for the delivered results. For missing Chrome, run `n
 
 ## Deployment and limitations
 
+For **Vercel web + a persistent backend**, use [the deployment guide](docs/DEPLOYMENT.md).
+`render.yaml` prepares a paid backend with a persistent disk; Vercel needs
+`ORBIT_BACKEND_URL` before its build. Hosting accounts and backend provisioning
+are required before the web can operate. Local account data is never pushed to GitHub.
+
 Deploy to a persistent **single Node host/container with local writable disk**, using the documented build/start commands, HTTPS reverse proxy, preserved Host header, `COOKIE_SECURE=true`, and `APP_ORIGIN`. Persist the data directory. The start command supervises the feed worker; use an external process supervisor for restarts and availability. SQLite WAL must not be shared across independent machines/network filesystems. Multi-host deployment needs a shared transactional database and revised feed leadership/stream distribution.
 
 This release has virtual spot funds only, full fills only, no executable-liquidity/queue model, no real money/KYC/withdrawals, and no email verification/password recovery/MFA. Watchlists persist per browser. Histories have filters but no pagination/export. Portfolio performance is observed rather than fully unattended. Public data and regional availability are external dependencies; backend/feed downtime pauses matching. Additional providers and CSV export remain possible future work.
