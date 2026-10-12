@@ -1,0 +1,146 @@
+[
+  {
+    "symbol": "BTC",
+    "name": "Bitcoin",
+    "initial": "67432.80",
+    "tick": "0.01",
+    "lot": "0.00001",
+    "color": "#e6a04b",
+    "mark": "₿"
+  },
+  {
+    "symbol": "ETH",
+    "name": "Ethereum",
+    "initial": "3518.42",
+    "tick": "0.01",
+    "lot": "0.0001",
+    "color": "#a0a9d4",
+    "mark": "Ξ"
+  },
+  {
+    "symbol": "SOL",
+    "name": "Solana",
+    "initial": "172.65",
+    "tick": "0.01",
+    "lot": "0.001",
+    "color": "#a3cbbc",
+    "mark": "◎"
+  },
+  {
+    "symbol": "BNB",
+    "name": "BNB",
+    "initial": "598.24",
+    "tick": "0.01",
+    "lot": "0.001",
+    "color": "#dcca62",
+    "mark": "◇"
+  },
+  {
+    "symbol": "HYPE",
+    "name": "Hyperliquid",
+    "initial": "40",
+    "tick": "0.01",
+    "lot": "0.001",
+    "color": "#8ce5c9",
+    "mark": "H"
+  },
+  {
+    "symbol": "XRP",
+    "name": "XRP",
+    "initial": "0.5348",
+    "tick": "0.0001",
+    "lot": "1",
+    "color": "#c8ced1",
+    "mark": "×"
+  },
+  {
+    "symbol": "ADA",
+    "name": "Cardano",
+    "initial": "0.4526",
+    "tick": "0.0001",
+    "lot": "1",
+    "color": "#6b9acd",
+    "mark": "⠿"
+  },
+  {
+    "symbol": "DOGE",
+    "name": "Dogecoin",
+    "initial": "0.1425",
+    "tick": "0.0001",
+    "lot": "1",
+    "color": "#c2b577",
+    "mark": "Ð"
+  },
+  {
+    "symbol": "AVAX",
+    "name": "Avalanche",
+    "initial": "36.82",
+    "tick": "0.01",
+    "lot": "0.01",
+    "color": "#cf7373",
+    "mark": "△"
+  },
+  {
+    "symbol": "LINK",
+    "name": "Chainlink",
+    "initial": "18",
+    "tick": "0.001",
+    "lot": "0.01",
+    "color": "#7291da",
+    "mark": "⬡"
+  },
+  {
+    "symbol": "SUI",
+    "name": "Sui",
+    "initial": "3.5",
+    "tick": "0.0001",
+    "lot": "0.1",
+    "color": "#76b6d1",
+    "mark": "S"
+  },
+  {
+    "symbol": "AAVE",
+    "name": "Aave",
+    "initial": "240",
+    "tick": "0.01",
+    "lot": "0.001",
+    "color": "#b59fc8",
+    "mark": "A"
+  },
+  {
+    "symbol": "UNI",
+    "name": "Uniswap",
+    "initial": "8",
+    "tick": "0.001",
+    "lot": "0.01",
+    "color": "#cd93b2",
+    "mark": "U"
+  },
+  {
+    "symbol": "LTC",
+    "name": "Litecoin",
+    "initial": "95",
+    "tick": "0.01",
+    "lot": "0.001",
+    "color": "#aab4c5",
+    "mark": "Ł"
+  },
+  {
+    "symbol": "TRX",
+    "name": "TRON",
+    "initial": "0.25",
+    "tick": "0.0001",
+    "lot": "0.1",
+    "color": "#c88686",
+    "mark": "T"
+  },
+  {
+    "symbol": "PEPE",
+    "name": "Pepe",
+    "initial": "0.00001",
+    "tick": "0.00000001",
+    "lot": "1",
+    "color": "#94b982",
+    "mark": "P"
+  }
+]
