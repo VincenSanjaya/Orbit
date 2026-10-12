@@ -219,6 +219,10 @@ See `docs/VERIFICATION.md` for the delivered results. For missing Chrome, run `n
 
 ## Deployment and limitations
 
+To keep the backend and existing wallet on your laptop, follow
+[Vercel + ngrok local backend](docs/LOCAL-BACKEND.md). Keep ORBIT and ngrok running
+while using the web; this setup does not provide unattended matching.
+
 For **Vercel web + a persistent backend**, use [the deployment guide](docs/DEPLOYMENT.md).
 `render.yaml` prepares a paid backend with a persistent disk; Vercel needs
 `ORBIT_BACKEND_URL` before its build. Hosting accounts and backend provisioning
