@@ -24,7 +24,14 @@ export async function api<T>(path: string, body?: unknown): Promise<T> {
     body: body ? JSON.stringify(body) : undefined,
     cache: 'no-store',
   });
-  const result = await response.json();
+  let result;
+  try {
+    result = await response.json();
+  } catch {
+    throw new Error(
+      'Could not connect to ORBIT’s API. Check the local server, ngrok, and backend URL in Vercel.',
+    );
+  }
   if (!response.ok)
     throw new Error(result.error || result.order?.reason || 'Something went wrong.');
   return result as T;
